@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+C:\cmind_Task\cmind\cmind_javaTask\.metadata\.plugins\org.eclipse.jdt.core
+3150237371.index
+2340488707.index
