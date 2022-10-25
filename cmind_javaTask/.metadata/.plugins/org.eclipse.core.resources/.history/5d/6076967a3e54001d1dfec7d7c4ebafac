@@ -1,0 +1,16 @@
+package com.cmind.entity;
+
+import lombok.Data;
+import javax.validation.constraints.Pattern;
+
+public class Validation {
+	
+	@NotBlank
+	@Length(max=6)
+	private String employee_id;
+	
+	@NotBlank
+	@Length(min=8,max=255)
+	private String password;
+
+}

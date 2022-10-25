@@ -1,0 +1,13 @@
+package com.cmind.entity;
+
+public class Validation {
+	
+	@NotBlank
+	@Length(max=6)
+	private String employee_id;
+	
+	@NotBlank
+	@Length(min=8,max=255)
+	private String password;
+
+}

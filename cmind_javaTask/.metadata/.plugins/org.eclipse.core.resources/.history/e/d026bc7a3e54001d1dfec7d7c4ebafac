@@ -1,0 +1,20 @@
+package com.cmind.entity;
+
+import lombok.Data;
+import javax.validation.constraints.Pattern;
+
+
+@Data
+public class Validation {
+	
+	@NotBlank
+	@Length(max=6)
+	@Pattern(regexp = "^[0-9]*$")
+	private String employee_id;
+	
+	@NotBlank
+	@Length(min=8,max=255)
+	@Pattern(regexp = "^[a-zA-Z0-9]*$")
+	private String password;
+
+}
