@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="https://www.thymeleaf.org"
+	xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+<title>トップページ</title>
+</head>
+<body>
+
+	<div class="left-side-menu">
+		<div class="top-logo-box"><img th:src="@{/images/cmind_logo.png}"></div>
+		<div>トップページ</div>
+		<div>サービス紹介</div>
+		<div>会社案内</div>
+		<div>新着情報</div>
+		<div>採用情報</div>
+		<form th:action="@{/logout}" method="post">
+		<input type="submit" value="Sign Out" />
+	</form>
+	</div>
+	
+	<div class="header">
+	    <div class="user">ユーザー：</div>
+	</div>
+	<div class="contents">
+	    <div>世の中をフラットに</div>
+		<div>スリホ</div>
+		<div>オービス</div>
+		<div>カリクル</div>
+		<div>その他</div>
+	</div>
+	<div class="footer">
+	</div>
+</body>
+</html>
