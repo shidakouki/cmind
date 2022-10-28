@@ -1,0 +1,41 @@
+package com.cmind.form;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
+
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
+@Data
+
+public class Form {
+
+	//login.htmlから送信されてきた社員番号のデータを保持する
+	@Setter
+	@Getter
+	private String employeeId;
+
+	//login.htmlから送信されてきたパスワードのデータを保持する
+	@Getter
+	@Setter
+	private String password;
+
+	/*
+	 * public Validation(String employeeId, String password) {
+	 * 
+	 * @NotBlank
+	 * 
+	 * @Size(max=6)
+	 * 
+	 * @Pattern(regexp = "^[0-9]*$") return employeeId;
+	 * 
+	 * @NotBlank
+	 * 
+	 * @Size(min=8,max=255)
+	 * 
+	 * @Pattern(regexp = "^[a-zA-Z0-9]*$") return password; }
+	 */
+
+}

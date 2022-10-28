@@ -1,0 +1,12 @@
+package com.cmind.form;
+
+import lombok.Data;
+
+@Data
+public class Form {
+	
+	private String employeeId;
+	
+	private String password;
+
+}

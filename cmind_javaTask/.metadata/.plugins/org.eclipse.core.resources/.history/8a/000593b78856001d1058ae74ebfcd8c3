@@ -1,0 +1,24 @@
+package com.cmind	.controller;
+
+import org.springframework.stereotype.Controller;
+
+
+@Controller
+public class LoginController {
+
+	  //ログイン画面への遷移
+	  
+	  @GetMapping String getLogin() { return "login"; }
+	  
+	  //ログイン成功時のメニュー画面への遷移
+	  
+	  @PostMapping String postLogin() { return "redirect:/top"; }
+	 
+    
+	/*
+	 * @RequestMapping("/top") public String top(@ModelAttribute Form loginForm,
+	 * Model model) { model.addAttribute("loginForm", loginForm);
+	 * System.out.println(model); return "top"; }
+	 */
+	
+}
