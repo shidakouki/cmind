@@ -1,0 +1,52 @@
+package com.cmind.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.cmind.form.LoginForm;
+
+@Controller
+public class LoginController {
+//
+//	// ログイン画面への遷移
+//
+//	@GetMapping
+//	String getLogin() {
+//		return "login";
+//	}
+//
+//	// ログイン成功時のメニュー画面への遷移
+//
+//	@PostMapping
+//	String postLogin() {
+//		return "redirect:/top";
+//	}
+
+	@RequestMapping("/login")
+	public String top(@ModelAttribute LoginForm loginForm, Model model) {
+		model.addAttribute("loginForm", loginForm);
+		loginForm.getEmployeeid();
+		loginForm.getPassword();
+		System.out.println("employeeId取得"+loginForm.getEmployeeid());
+		System.out.println("password取得"+loginForm.getPassword());
+		return "login";
+	}
+}
+
+/*
+ * public Validation(String employeeId, String password) {
+ * 
+ * @NotBlank
+ * 
+ * @Size(max=6)
+ * 
+ * @Pattern(regexp = "^[0-9]*$") return employeeId;
+ * 
+ * @NotBlank
+ * 
+ * @Size(min=8,max=255)
+ * 
+ * @Pattern(regexp = "^[a-zA-Z0-9]*$") return password; }
+ */

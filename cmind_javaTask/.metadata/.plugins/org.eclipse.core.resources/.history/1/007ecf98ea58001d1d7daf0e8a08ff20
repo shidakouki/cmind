@@ -1,0 +1,21 @@
+package com.cmind.form;
+
+import lombok.Getter;
+import lombok.Setter;
+
+public class LoginForm {
+	// login.htmlから送信されてきた社員番号のデータを保持する
+
+	@Setter
+
+	@Getter
+	private String employeeid;
+
+	// login.htmlから送信されてきたパスワードのデータを保持する
+
+	@Getter
+
+	@Setter
+	private String password;
+
+}
